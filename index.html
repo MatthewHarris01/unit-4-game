@@ -1,14 +1,100 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta author = "Matthew S Harris">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Crystal Hunter Game</title>
-</head>
-<body>
-  <h1>This is a placeholder document</h1>
 
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta author="Matthew S Harris">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Crystal Gatherer Game</title>
+
+    <!-- linke to styles-->
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" <link rel="stylesheet" type="text/css"
+      href="assets/css/style.css">
+    <!-- link to the jQuery Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <!-- add JS file link-->
+    <script type="text/javascript" src="assets/javascript/game.js"></script>
+
+  </head>
+
+  <body>
+
+    <!-- page header -->
+    <header>
+      <h1>Crystal Gatherer!</h1>
+    </header>
+
+    <!-- directions div -->
+    <div class="directions">
+      <h2>How to Play the Game:</h2>
+      <ol class="directions">
+        <li>Each time the game starts or restarts, you will be given a randomly generated "goal" score.</li>
+        <li>Click one of the four crystals below to gather crystal points.</li>
+        <li>You win by matching your gathered score to your goal score.</li>
+        <li>You lose if your gathered score goes above your goal score.</li>
+        <li>The gather score of each crystal is hidden, until you click the crystal</li>
+        <li>Each time the game starts or restarts, the gather score value of each crystal will change.</li>
+      </ol>
+<!--       
+      <p class="directions">
+        You will be given a random number at the start of the game. This number is your goal score.
+      </p>
+      <p class="directions">
+        There are four crystals below. By clicking on a crystal, you will add a specific amount of points to your total score.
+      </p>
+      <p class="directions">
+        You win the game by matching your total score to your goal score. You lose the game if your total score goes above the randomly generated goal score.
+      </p>
+      <p class="directions">
+        The value of each crystal is hidden from you until you click on it.
+      </p>
+      <p class="directions">
+        Each time the game starts or restarts, the value of each crystal will change.
+      </p> -->
+    </div>
+
+    <!-- goalscore and wins/losses -->
+    <!-- using a table is not the best way to do this, but I can't get div elements to flow left to right -->
+    <table style="border:2px solid blue;width:50%;border-collapse:collapse;cellspacing:10px;">
+      <tr> 
+        <td class="tdscoregoal" style="width:45%;">  <!--this is the goal score display in this table cell-->
+          Your score goal: <span class="goalscore" id="goalscore">39</span>
+        </td>  <!--this is the goal score display in this table cell-->
+        <td class="scoreboard" >  <!--this is the overall win/loss display in this table cell-->
+          <p style="font-size:14pt;"><b>Overall Score:</b></p>
+          <p>Wins: <span class="totalwins">0</span></p>
+          <p>Losses: <span class="totalLosses">0</span></p>    
+        </td>
+      </tr>
+
+    </table>
+
+    <!-- goalscore div 
+    <div class="goalscore"> 
+      <p class="goalscore">
+        Your score goal: <span class="goalscore" id="goalscore">39</span>
+      </p>
+    </div>
+  -->
+    <!-- test div 
+    <div style="width:20%;border:2px solid red;display:block;position:relative;top:0;left:0;">
+      TEST DIV
+    </div>
+  -->
+    <!-- Count of Wins and Losses 
+    <div class="scoreboard" style="border:2px solid blue;">
+
+
+    </div>
+  -->
+    <!-- Current crystals score -->
+    <div class="currentgathered">
+      <p>Current amount of crystals gathered: <span class="currentgathered">0</span></p>
+    
+    </div>
+
+  </body>
+
 </html>

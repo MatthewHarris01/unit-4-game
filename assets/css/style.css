@@ -1,0 +1,124 @@
+/* CSS for Crystal Hunter Game */
+
+body {
+  background-image:url('../images/bg-image.bmp');
+}
+header {
+  background-color:#cb6e35;
+  width:30%;
+  padding:16pt;
+  text-align:center;
+  margin-top:16pt;
+
+}
+
+h1 {
+  color:white;
+  font-family:Verdana, Geneva, Tahoma, sans-serif;
+  font-size:20pt;
+  font-weight:bold;
+
+}
+
+h2 {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size:18pt;
+  font-weight:bold;
+  color: green;
+  text-align:center;
+  margin:0;
+}
+div.directions {
+  background-color: #fbe6cf;
+  width: 50%;
+  padding-top:12pt;
+  padding-left:6pt;
+  margin-top:10pt;
+  border:2px solid blue;
+
+}
+
+p.directions {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:bold;
+  font-size:14pt;
+  color:green;
+}
+
+div.goalscore { 
+  background-color: #53c987;
+  font-family:cursive;
+  color:black;
+  padding:25pt;
+  /*display:inline;*/
+  width:30%;
+  margin-top:12pt;
+  border:1px sold red;
+}
+
+td.tdscoregoal {
+  background-color: #53c987;
+  font-family:cursive;
+  font-size:14pt;
+  color:black;
+  padding:25pt;
+  width:50%;
+	
+}
+
+td.scoreboard {
+	background-color:#3bfefb;
+	text-align:center;
+	padding-left:6pt;"
+}
+
+ol.directions {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-weight:bold;
+  font-size:14pt;
+  color:green;
+  margin-left:14pt;
+  margin-right:14pt;
+}
+
+
+div.scoreboard {
+  background-color: #3bfefb;
+  width:10%;
+  /*display:block;*/
+  /*float:left;*/
+}
+
+div.currentgathered {
+  background-color: #20a295;
+  text-size:14pt;
+  width:20%;
+  padding:12pt;
+
+
+}
+
+span.goalscore {
+  color:red;
+  font-weight:bolder;
+  font-size:18pt;
+/*  float:left;*/
+}
+
+span.totalwins {
+  color: green;
+  font-weight:bolder;
+  font-size:18pt;
+}
+span.totalLosses {
+  color:red;
+  font-weight:bolder;
+  font-size:18pt;
+}
+
+span.currentgathered {
+  color:yellow;
+  font-weight:bold;
+  font-size:18pt;
+
+}
