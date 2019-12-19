@@ -52,8 +52,8 @@
         </td>  <!--this is the goal score display in this table cell-->
         <td class="scoreboard" >  <!--this is the overall win/loss display in this table cell-->
           <p style="font-size:14pt;"><b>Overall Score:</b></p>
-          <p>Wins: <span class="totalwins">0</span></p>
-          <p>Losses: <span class="totalLosses">0</span></p>    
+          <p>Wins: <span id="totalwins" class="totalwins">0</span></p>
+          <p>Losses: <span id="totalLosses" class="totalLosses">0</span></p>    
         </td>
       </tr>
     </table>
@@ -74,10 +74,7 @@
         <td style="width:48px;">
           <img id="x4" src=assets/images/xtal4.jpg alt="Crystal 4" value="xtal4">
         </td>
-
-
       </tr>
-
     </table>
 
 
@@ -86,7 +83,7 @@
     
     <!-- Current crystals score -->
     <div class="currentgathered">
-      <p><b>Current amount of crystals gathered:</b> <span class="currentgathered">0</span></p>
+      <p><b>Current amount of crystals gathered:</b> <span id="currentgathered" class="currentgathered">0</span></p>
     
     </div>
 
