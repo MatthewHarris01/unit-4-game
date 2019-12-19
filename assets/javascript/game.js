@@ -186,9 +186,53 @@ $(document).ready(function () {
     // console.log("an image was clicked");
 
     var tmp = "";
+    var xtalPoints=0;
 
+    // get the id of the image clicked
     tmp = $(this).attr("id");
-    console.log("Image " + tmp + " was clicked");
+    // console.log("Image " + tmp + " was clicked");
+
+
+    // get the amount of crystal points from the clicked crystal
+    if (tmp=="x1") {
+      console.log("x1 was clicked");
+      console.log("x1 produces " + x1.value + " points");
+      xtalPoints += x1.value;
+      crystalScore += xtalPoints;
+      updateDisplay();
+    }
+    else if (tmp == "x2") {
+      console.log("x2 was clicked");
+      console.log("x2 produces " + x2.value + " points");
+      xtalPoints += x2.value;
+      crystalScore += xtalPoints;
+      updateDisplay();
+    }
+    else if (tmp == "x3") {
+      console.log("x3 was clicked");
+      console.log("x3 produces " + x3.value + " points");
+      xtalPoints += x3.value;
+      crystalScore += xtalPoints;
+      updateDisplay();
+    }
+    else if (tmp == "x4") {
+      console.log("x4 was clicked")
+      console.log("x4 produces " + x4.value + " points");
+      xtalPoints += x4.value;
+      crystalScore += xtalPoints;
+      updateDisplay();
+    }
+
+    // test for Win or Loss now
+    if (scoreGoal == crystalScore) {
+      console.log("THIS IS A WIN");
+    }
+    else if (crystalScore > scoreGoal) {
+      console.log("THIS IS A LOSS");
+    }
+
+
+
 
   } //end of image click event
   ) //end of image click event handler parameter list

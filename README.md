@@ -5,4 +5,5 @@ Version 0.2 -- basic game layout in index.html is mostly complete, still needs t
 style.css if filled in for the basic page appearance. no code for the game written yet. Crystal images added to asserts/images folder. 
 Version 0.3 -- crysal object coding started, added favicon to main game page.
 Version 0.4 -- crystal object coding completed, starting game-play coding in image click event-handler.
+0.5 -- game now accrues crystal points, and can determine a win or loss.
 updated 12/18/19 5:02 pm.
