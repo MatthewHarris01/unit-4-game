@@ -29,17 +29,26 @@
       <h1>Crystal Gatherer!</h1>
     </header>
 
+
     <!-- directions div -->
-    <div class="directions">
+    <div class="directions" style="float:left;">
       <h2>How to Play the Game:</h2>
       <ol class="directions">
         <li>Each time the game starts or restarts, you will be given a randomly generated "goal" score.</li>
         <li>Click one of the four crystals below to gather crystal points.</li>
-        <li>You win by matching your gathered score to your goal score.</li>
-        <li>You lose if your gathered score goes above your goal score.</li>
+        <li>You win by matching your score of gathered crystals to  your goal score.</li>
+        <li>You lose if your score of gathered crystals goes above your goal score.</li>
         <li>The gather score of each crystal is hidden, until you click the crystal</li>
         <li>Each time the game starts or restarts, the gather score value of each crystal will change.</li>
       </ol>
+    </div>
+
+    <!-- <div style="float:left;background-color:blue;"></div>
+      YOU LOSE! try again!
+    </div> -->
+
+    <div id="outcome" style="float:left;background-color:yellow;width:40%;visibility: hidden;">
+      <p id="outcome-msg">YOU LOST! try again! Game will restart in 10 seconds.</p>
     </div>
 
     <!-- goalscore and wins/losses -->
