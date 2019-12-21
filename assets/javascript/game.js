@@ -67,7 +67,8 @@ $(document).ready(function () {
   //Create crystal x1
   var tmp = (Math.floor(Math.random() * 12) + 1);
 // FOR TESTING X1 IS ALWAYS 1 POINT  
-  var x1 = new Xtal("x1", 1);
+  // var x1 = new Xtal("x1", 1);
+  var x1 = new Xtal("x1", tmp);
   // console.log("new x1 crystal id=" + x1.id + ", value=" + x1.value);
 
   //Create crystal x2
@@ -91,7 +92,8 @@ $(document).ready(function () {
 
     var tmp = (Math.floor(Math.random() * 12) + 1);
     //FOR TESTING X1 IS ALWAYS 1 PT
-    x1.value = 1;
+    // x1.value = 1;
+    x1.value = tmp;
     tmp = (Math.floor(Math.random() * 12) + 1);
     x2.value = tmp;
     tmp = (Math.floor(Math.random() * 12) + 1);
