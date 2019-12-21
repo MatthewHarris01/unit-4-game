@@ -7,8 +7,8 @@ var crystalScore = 0; //the total amount of crysta points gathred in the current
 var Wins = 0; //total count of player wins
 var Losses = 0; //total count of player losses
 var gatherOn = true; //flag to indicate whether is it currently possible to gather crystals
-var winsound = new Audio("win.wav");
-var losesound = new Audio("youlose.wav");
+var winsound = new Audio("win.mp3");
+var losesound = new Audio("youlose.mp3");
 
 
 
@@ -121,7 +121,7 @@ $(document).ready(function () {
     // console.log("x3 value=" + x3.value);
     // console.log("x4 value=" + x4.value);
 
-    console.log("performing reset");
+    console.log("performing crystal reset");
     var tmp = (Math.floor(Math.random() * 12) + 1);
     console.log("CHEAT FOR TESTING X1 IS ALWAYS 1");
     x1.value = 1;
@@ -138,7 +138,7 @@ $(document).ready(function () {
     // console.log("x2 value=" + x2.value);
     // console.log("x3 value=" + x3.value);
     // console.log("x4 value=" + x4.value);
-
+    console.log("end of resetCrystals function");
   } //end of resetCrystals function
 
 
@@ -205,25 +205,21 @@ console.log("ATTEMPTING TO DETERMINE WIN/LOSS");
       if (Goal == crystalScore) {
         console.log("THIS IS A WIN");
         winsound.play;
-        // alert("You win! Game will restart in about 10 seconds after you dismiss this alert.");
+        // alert("You win! Game will restart in about 15 seconds after you dismiss this alert.");
         //SET TIMER timer to restart game in 10 seconds
         //increment win count
         Wins += 1;
         document.getElementById("outcome").style.backgroundColor="lightgreen";
-        document.getElementById("outcome").innerHTML = "you WIN! Try again! Game will reset in about 10 seconds."
+        document.getElementById("outcome-msg").innerHTML = "you WIN! Try again! Game will reset in about 15 seconds."
         document.getElementById("outcome").style.visibility="visible";
   
 
-        console.log("SET TIMER FOR 15 SECONDS TO RESET GAME");
+        console.log("SET TIMER FOR 10 SECONDS TO RESET GAME");
         // setTimeout(fiveSeconds(true),1000* 5);
         // setTimeout(tenSeconds(true), 1000* 10);
-        setTimeout(resetGame(true), 1000 * 15);
+        setTimeout(resetGame, 1000 * 10);
 
         //ONCE GAME HAS BEEN RESET, USER CAN JUST START CLICKNG CRYSTALS AGAIN TO PLAY through another round.
-
-        //disable the crystal click function, so no score is accrued while waiting for reset
-        // gatherOn =false;
-        //FOLLOWING CODE RESETS GAME AFTER WIN
       }
       else if (crystalScore > Goal) {
         console.log("THIS IS A LOSS");
@@ -235,13 +231,15 @@ console.log("ATTEMPTING TO DETERMINE WIN/LOSS");
         //disable the crystal click function, so no score is accrued while waiting for reset
         // gatherOn=false;
 
-        console.log("SET TIMER FOR 15 SECONDS TO RESET GAME");
-        setTimeout(resetGame(false), 1000 * 15);
+        console.log("SET TIMER FOR 10 SECONDS TO RESET GAME");
+        setTimeout(resetGame, 1000 * 10);
         //reset the goal score
         Goal = (Math.floor(Math.random() * 102) + 19); //player's goal score, random 19-120
         //reset crystal gather score
         crystalScore = 0;
         //show the outcome block
+        document.getElementById("outcome").style.backgroundColor = "yellow";
+        document.getElementById("outcome-msg").innerHTML= "You lost! game will reset in about 15 seconds";
         document.getElementById("outcome").style.visibility = "visible";
         //update the display
         updateDisplay();
@@ -293,18 +291,19 @@ console.log("end of image click event");
 
   function resetGame(Win) {
     //this function resets the game variables for another round of play. The "Win" parameter is expected to be a boolean
-    //if true, the function is resetting the game after a win, if false, it is resetting the game after a a loss
-    console.log("resetGame function");
-    if (Win) { 
-      // alert("resetting game after a WIN");
-    }
-    else {
-      // alert("resetting game after a LOSS");
-    }
+    //if true, the function is resetting the game after a win, if false, it is resetting the game after a a loss, meh not implementng the win argument, it is not needed, reset is the same whether or not it was a win or loss.
+    console.log("RESETTING GAME!!!!!  ");
+    // if (Win) { 
+    //   // alert("resetting game after a WIN");
+    // }
+    // else {
+    //   // alert("resetting game after a LOSS");
+    // }
   
   
     //tasks to reset the game, once game has been reset, user can resume clicking crystals to play another round.
     //hide the outcome div
+    console.log("hide the outcome div");
     document.getElementById("outcome").style.visibility="hidden";
     //reset the Goal score
      Goal = (Math.floor(Math.random() * 102) + 19); //player's goal score, random 19-120
@@ -317,6 +316,7 @@ console.log("end of image click event");
     
     //enable the crystal click function
     gatherOn=true;
+    console.log("end of resetting game");
   };
   
 
