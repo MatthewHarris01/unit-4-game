@@ -9,5 +9,6 @@ Version 0.4 -- crystal object coding completed, starting game-play coding in ima
 Version 0.6 -- successfully determines win or loss, does not yet restart the game after a win or loss.
 Version 0.7 -- game reset after win/loss implemented, but requires debugging. Win/lose sounds added, but do not play successfully.
 Version 0.8 -- win/loss implemented and debugged. Win/lose sounds converted to mp3 format, but still do not play.
-Version 1.0 -- added an alert message to let user know expilicitly that game has been reset. Worked on variety of methods for playing sounds, they still do not play, even when tested explicitly, not part of game code. I am thinkng this may be a Chrome setting, although I am not getting any error messages in the console. I've done a variety of research on this issue, and not found any answers that work.
-updated 12/20/19 8:31 pm.
+Version 1.0 -- added an alert message to let user know expilicitly that game has been reset. Worked on variety of methods for playing sounds, they still do not play, even when tested explicitly, not part of game code. I am thinkung this may be a Chrome setting, although I am not getting any error messages in the console. I've done a variety of research on this issue, and not found any answers that work.
+Version 1.2 -- testing code removed.
+updated 12/20/19 8:53 pm.
