@@ -10,4 +10,4 @@ Version 0.6 -- successfully determines win or loss, does not yet restart the gam
 Version 0.7 -- game reset after win/loss implemented, but requires debugging. Win/lose sounds added, but do not play successfully.
 Version 0.8 -- win/loss implemented and debugged. Win/lose sounds converted to mp3 format, but still do not play.
 Version 1.0 -- added an alert message to let user know expilicitly that game has been reset. Worked on variety of methods for playing sounds, they still do not play, even when tested explicitly, not part of game code. I am thinkng this may be a Chrome setting, although I am not getting any error messages in the console. I've done a variety of research on this issue, and not found any answers that work.
-updated 12/20/19 7:15 pm.
+updated 12/20/19 8:31 pm.
